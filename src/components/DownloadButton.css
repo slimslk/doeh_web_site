@@ -1,0 +1,82 @@
+.dlbtn-wrapper {
+  display: flex;
+  margin-top: 4rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dlbtn {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  height: 48px;
+  min-width: 220px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.15s;
+}
+
+.dlbtn:hover  { filter: brightness(1.12); transform: scale(1.02); }
+.dlbtn:active { filter: brightness(0.92); transform: scale(0.98); }
+
+/* ── Left cap ── fixed width, size matches your btn-left.png */
+.dlbtn__left {
+  display: block;
+  width: 32px;           /* ← set to natural pixel width of btn-left.png */
+  flex-shrink: 0;
+  background-image: url('/images/left_button_old_paper.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* ── Middle ── stretches horizontally to fill remaining space */
+.dlbtn__mid {
+  display: block;
+  flex: 1;
+  background-image: url('/images/middle_button_old_paper.png');
+  background-repeat: repeat-x;        /* tile horizontally */
+  background-position: left center;
+  background-size: auto 100%;         /* natural width, full height */
+}
+
+/* ── Right cap ── fixed width, size matches your btn-right.png */
+.dlbtn__right {
+  display: block;
+  width: 32px;           /* ← set to natural pixel width of btn-right.png */
+  flex-shrink: 0;
+  background-image: url('/images/right_button_old_paper.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+/* ── Label overlaid on all three parts ── */
+.dlbtn__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1a1206;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ── Sub-text below button ── */
+.dlbtn__sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-align: center;
+}

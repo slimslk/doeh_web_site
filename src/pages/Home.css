@@ -1,0 +1,113 @@
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/background.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  background-attachment: scroll;
+}
+
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 4rem;
+  padding: 3rem 2rem 15rem;
+  gap: 0;
+}
+
+.hero__subtitle {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #B2A99C;
+  margin: 0 0 0.75rem;
+}
+
+.hero__title {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(2rem, 3vw, 5rem);
+  font-weight: 700;
+  color: #948D82;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-align: center;
+  text-shadow: 0 2px 32px rgba(0, 0, 0, 0.9), 0 0 60px rgba(148, 141, 130, 0.12);
+  margin: 0 0 2.5rem;
+}
+
+.about {
+  background: transparent;
+  padding: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: none;
+  color: #0a0a0b;
+}
+
+.about__heading {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #948d82;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.about__body {
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+}
+
+.about__body p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #B2A99C;
+  margin: 0 0 1.25rem;
+}
+
+.about__closing {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: #B2A99C !important;
+  font-style: italic;
+  margin-top: 1.5rem !important;
+  text-transform: uppercase;
+}

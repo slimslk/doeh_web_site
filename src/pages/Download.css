@@ -1,0 +1,195 @@
+.dl {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #0a0a0b;
+}
+
+.dl__hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.dl__hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/background.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;
+}
+
+.dl__hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 11, 0.6) 0%,
+    rgba(10, 10, 11, 0.3) 40%,
+    rgba(10, 10, 11, 0.82) 100%
+  );
+}
+
+.dl__hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem 3rem;
+}
+
+.dl__subtitle {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #948D82;
+  margin: 0 0 0.6rem 3rem;
+}
+
+.dl__title {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #948D82;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 24px #0a0a0b;
+  margin: 0 0 0.75rem 2rem;
+}
+
+.dl__intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #948D82;
+  margin: 0 0 0 3rem;
+  letter-spacing: 0.03em;
+}
+
+.dl__steps {
+  background: linear-gradient(180deg, #0a0a0b 0%, #0e0d0c 100%);
+  padding: 4rem 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid rgba(148, 141, 130, 0.12);
+}
+
+.dl__steps-inner {
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem 1.75rem;
+  background: rgba(148, 141, 130, 0.03);
+  border: 1px solid rgba(148, 141, 130, 0.12);
+  border-radius: 2px;
+}
+
+.step__num {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(148, 141, 130, 0.15);
+  line-height: 1;
+  min-width: 2.5rem;
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.step__content {
+  flex: 1;
+}
+
+.step__title {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #948d82;
+  margin: 0 0 0.6rem;
+}
+
+.step__body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: rgba(212, 201, 176, 0.8);
+  margin: 0;
+}
+
+.step__code {
+  margin: 0.75rem 0 0;
+  padding: 0.8rem 1.1rem;
+  background: rgba(148, 141, 130, 0.06);
+  border: 1px solid rgba(148, 141, 130, 0.15);
+  border-radius: 2px;
+  overflow-x: auto;
+}
+
+.step__code code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #c9a84c;
+  white-space: pre;
+}
+
+.dl__note {
+  max-width: 720px;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(148, 141, 130, 0.04);
+  border-left: 2px solid rgba(148, 141, 130, 0.3);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: rgba(148, 141, 130, 0.55);
+}
+
+.step__body p {
+  margin: 0 0 0.8rem;
+}
+
+.step__body a {
+  color: #c9a84c;
+  text-decoration: underline;
+}
+
+.step__body code {
+  background: rgba(148, 141, 130, 0.08);
+  padding: 0.1rem 0.3rem;
+  border-radius: 2px;
+}
+
+.step__body pre {
+  margin: 0.75rem 0;
+  padding: 0.8rem 1.1rem;
+  background: rgba(148, 141, 130, 0.06);
+  border: 1px solid rgba(148, 141, 130, 0.15);
+  overflow-x: auto;
+}
+
+.step__body pre code {
+  background: none;
+  padding: 0;
+  color: #c9a84c;
+}
