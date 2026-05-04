@@ -4,7 +4,7 @@ import './Footer.css';
 const SOCIAL_LINKS = [
     {
         name: 'Discord',
-        href: 'https://discord.gg/',
+        href: 'https://discord.gg/THQ2qDnBJn',
         icon: (
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path
